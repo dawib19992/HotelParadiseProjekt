@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +18,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_potwierdz_clicked();
+
+    void on_resjestracja_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase mydb;
 };
 #endif // MAINWINDOW_H
