@@ -60,8 +60,8 @@ void MainWindow::on_potwierdz_clicked()
     if(dodano == 1)
     {
         hide();
-        pSterowania = new panel_sterowania(this);
-        pSterowania->show();
+        ps_gosc = new panel_sterowania_gosc(this);
+        ps_gosc->show();
     }
 }
 
