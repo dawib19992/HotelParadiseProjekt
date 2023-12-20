@@ -28,9 +28,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_potwierdz_clicked()
 {
-    QString login, haslo;
-    login = ui->login_lineedit->text();
-    haslo = ui->haslo_lineedit->text();
+    Gosc gosc;
+    gosc.login = ui->login_lineedit->text();
+    gosc.haslo = ui->haslo_lineedit->text();
 
     if(!mydb.isOpen())
     {
@@ -39,7 +39,7 @@ void MainWindow::on_potwierdz_clicked()
     }
     QSqlQuery insertQuery;
     int dodano = 0;
-    if(insertQuery.exec("select * from loginy where login='"+login+"'and haslo= '"+haslo+"'"))
+    if(insertQuery.exec("select * from loginy where login='"+gosc.login+"'and haslo= '"+gosc.haslo+"'"))
     {
         int licznik = 0;
         while(insertQuery.next())
@@ -59,9 +59,9 @@ void MainWindow::on_potwierdz_clicked()
 
     if(dodano == 1)
     {
-        hide();
-        ps_gosc = new panel_sterowania_gosc(this);
-        ps_gosc->show();
+       close();
+       ps_gosc = new panel_sterowania_gosc(this);
+       ps_gosc->show();
     }
 }
 

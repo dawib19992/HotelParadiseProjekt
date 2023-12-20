@@ -29,4 +29,14 @@ private:
     QSqlDatabase mydb;
     panel_sterowania_gosc *ps_gosc;
 };
+
+class MainWindow;
+
+class Gosc
+{
+    friend MainWindow;
+    QString login;
+    QString haslo;
+};
+
 #endif // MAINWINDOW_H

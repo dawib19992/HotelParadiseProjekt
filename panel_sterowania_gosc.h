@@ -15,6 +15,10 @@ public:
     explicit panel_sterowania_gosc(QWidget *parent = nullptr);
     ~panel_sterowania_gosc();
 
+private slots:
+
+    void on_mojedane_clicked();
+
 private:
     Ui::panel_sterowania_gosc *ui;
 };
