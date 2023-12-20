@@ -16,7 +16,6 @@ public:
 
 private:
     Ui::rezerwacjapokoju *ui;
-
 };
 
 #endif // REZERWACJAPOKOJU_H
