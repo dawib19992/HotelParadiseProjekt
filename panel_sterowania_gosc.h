@@ -2,7 +2,7 @@
 #define PANEL_STEROWANIA_GOSC_H
 
 #include <QMainWindow>
-
+#include "rezerwacjapokoju.h"
 namespace Ui {
 class panel_sterowania_gosc;
 }
@@ -17,8 +17,11 @@ public:
 
 private slots:
 
+    void on_rezerwuj_pokoj_clicked();
+
 private:
     Ui::panel_sterowania_gosc *ui;
+    rezerwacjapokoju* pokoj;
 };
 
 #endif // PANEL_STEROWANIA_GOSC_H

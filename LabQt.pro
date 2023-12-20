@@ -12,17 +12,20 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     panel_sterowania_gosc.cpp \
-    rezerwacja_sala.cpp
+    rezerwacja_sala.cpp \
+    rezerwacjapokoju.cpp
 
 HEADERS += \
     mainwindow.h \
     panel_sterowania_gosc.h \
-    rezerwacja_sala.h
+    rezerwacja_sala.h \
+    rezerwacjapokoju.h
 
 FORMS += \
     mainwindow.ui \
     panel_sterowania_gosc.ui \
-    rezerwacja_sala.ui
+    rezerwacja_sala.ui \
+    rezerwacjapokoju.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
