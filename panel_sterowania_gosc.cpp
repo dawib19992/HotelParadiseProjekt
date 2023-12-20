@@ -13,13 +13,3 @@ panel_sterowania_gosc::~panel_sterowania_gosc()
     delete ui;
 }
 
-void panel_sterowania_gosc::on_mojedane_clicked()
-{
-    ui->mojedane->hide();
-    ui->rezerwuj_pokoj->hide();
-    ui->rezerwuj_parking->hide();
-    ui->rezerwuj_sk->hide();
-    ui->sprawdz_rezerwacje->hide();
-    ui->menu->hide();
-}
-

@@ -17,8 +17,6 @@ public:
 
 private slots:
 
-    void on_mojedane_clicked();
-
 private:
     Ui::panel_sterowania_gosc *ui;
 };
