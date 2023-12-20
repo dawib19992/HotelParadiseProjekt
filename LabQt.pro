@@ -11,15 +11,18 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    panel_sterowania_gosc.cpp
+    panel_sterowania_gosc.cpp \
+    rezerwacja_sala.cpp
 
 HEADERS += \
     mainwindow.h \
-    panel_sterowania_gosc.h
+    panel_sterowania_gosc.h \
+    rezerwacja_sala.h
 
 FORMS += \
     mainwindow.ui \
-    panel_sterowania_gosc.ui
+    panel_sterowania_gosc.ui \
+    rezerwacja_sala.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
