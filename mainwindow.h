@@ -6,7 +6,6 @@
 #include <QtDebug>
 #include <QFileInfo>
 #include "panel_sterowania_gosc.h"
-#include "rezerwacjapokoju.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,8 +34,10 @@ class MainWindow;
 
 class Gosc
 {
-    friend MainWindow;
+    /*friend MainWindow;
     friend rezerwacjapokoju;
+    friend Rezerwacja_sala;*/
+public:
     QString login;
     QString haslo;
 };

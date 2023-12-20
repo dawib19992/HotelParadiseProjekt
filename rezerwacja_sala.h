@@ -5,6 +5,9 @@
 #include <QDebug>
 #include <QString>
 #include <QDateTime>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
 namespace Ui {
 class Rezerwacja_sala;
 }
@@ -37,6 +40,15 @@ public:
     int getRok(){
         return rok;
     }
+    /*void setDate(QDate rampampampam)
+    {
+        data = rampampampam;
+    }
+
+    QDate getDate()
+    {
+        return data;
+    }*/
 
 private slots:
     void on_calendarWidget_clicked(const QDate &date);
@@ -44,8 +56,8 @@ private slots:
 
 private:
     Ui::Rezerwacja_sala *ui;
-    int rok,miesiac,dzien;
-
+    //int rok,miesiac,dzien;
+    int dzien, miesiac, rok;
 };
 
 

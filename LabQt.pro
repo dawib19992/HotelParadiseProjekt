@@ -24,6 +24,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui \
     panel_sterowania_gosc.ui \
+    rezerwacja_sala.ui \
     rezerwacjapokoju.ui
 
 # Default rules for deployment.
