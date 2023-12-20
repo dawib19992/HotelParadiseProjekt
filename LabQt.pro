@@ -10,13 +10,16 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    panel_sterowania.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    panel_sterowania.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    panel_sterowania.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

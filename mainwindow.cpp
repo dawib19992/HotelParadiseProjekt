@@ -38,7 +38,7 @@ void MainWindow::on_potwierdz_clicked()
         return;
     }
     QSqlQuery insertQuery;
-
+    int dodano = 0;
     if(insertQuery.exec("select * from loginy where login='"+login+"'and haslo= '"+haslo+"'"))
     {
         int licznik = 0;
@@ -49,6 +49,7 @@ void MainWindow::on_potwierdz_clicked()
         if(licznik == 1)
         {
             ui->komunikat->setText("Poprawne login i hasło");
+            dodano++;
         }
         if(licznik < 1)
         {
@@ -56,6 +57,12 @@ void MainWindow::on_potwierdz_clicked()
         }
     }
 
+    if(dodano == 1)
+    {
+        hide();
+        pSterowania = new panel_sterowania(this);
+        pSterowania->show();
+    }
 }
 
 void MainWindow::on_resjestracja_clicked()
@@ -76,7 +83,7 @@ void MainWindow::on_resjestracja_clicked()
         QSqlQuery insertQuery;
         if(insertQuery.exec("INSERT INTO loginy VALUES(" + QString::number(licznik) + ", '" + login + "', '" + haslo + "')"))
         {
-            ui->komunikat->setText("Dodano użytkownika do bazy");
+            ui->komunikat->setText("Dodano użytkownika do bazy, teraz możesz się zalogować");
         }
         else
         {
@@ -89,4 +96,5 @@ void MainWindow::on_resjestracja_clicked()
     }
 
 }
+
 

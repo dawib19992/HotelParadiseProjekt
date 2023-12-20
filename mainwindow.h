@@ -5,6 +5,7 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
+#include "panel_sterowania.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,5 +27,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QSqlDatabase mydb;
+    panel_sterowania *pSterowania;
 };
 #endif // MAINWINDOW_H
